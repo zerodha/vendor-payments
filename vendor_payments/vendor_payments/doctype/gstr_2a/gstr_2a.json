@@ -1,0 +1,70 @@
+{
+    "actions": [],
+    "creation": "2022-12-22 17:26:15.176025",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "purchase_invoice",
+        "supplier",
+        "date",
+        "gstr_2a",
+        "gstr_2a_month"
+    ],
+    "fields": [
+        {
+            "fieldname": "purchase_invoice",
+            "fieldtype": "Link",
+            "label": "Purchase Invoice",
+            "options": "Purchase Invoice"
+        },
+        {
+            "fieldname": "supplier",
+            "fieldtype": "Link",
+            "label": "Supplier",
+            "options": "Supplier"
+        },
+        {
+            "fieldname": "date",
+            "fieldtype": "Date",
+            "label": "Date"
+        },
+        {
+            "fieldname": "gstr_2a",
+            "fieldtype": "Select",
+            "label": "GSTR 2A",
+            "options": "\nyes\nno"
+        },
+        {
+            "depends_on": "gstr_2a",
+            "fieldname": "gstr_2a_month",
+            "fieldtype": "Select",
+            "label": "GSTR 2A Month",
+            "options": "\nJanuary"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2022-12-22 17:26:23.539556",
+    "modified_by": "Administrator",
+    "module": "Vendor Payments",
+    "name": "GSTR 2A",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

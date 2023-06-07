@@ -1,0 +1,45 @@
+{
+    "actions": [],
+    "creation": "2023-01-02 01:52:24.869384",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "credit_note_number",
+        "credit_note_date",
+        "total_amount_including_gst"
+    ],
+    "fields": [
+        {
+            "columns": 5,
+            "fieldname": "total_amount_including_gst",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Total Amount (Including GST)"
+        },
+        {
+            "fieldname": "credit_note_number",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Credit Note Number"
+        },
+        {
+            "fieldname": "credit_note_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Credit Note Date"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "istable": 1,
+    "links": [],
+    "modified": "2023-01-25 12:06:13.435594",
+    "modified_by": "Administrator",
+    "module": "Vendor Payments",
+    "name": "GST Credit Note Details",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

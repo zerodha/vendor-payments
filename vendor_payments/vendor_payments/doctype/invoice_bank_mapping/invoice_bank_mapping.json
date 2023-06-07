@@ -1,0 +1,60 @@
+{
+  "actions": [],
+  "creation": "2022-11-17 00:32:24.158443",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "invoice_type",
+    "entry_name",
+    "bank_account"
+  ],
+  "fields": [
+    {
+      "fieldname": "invoice_type",
+      "fieldtype": "Select",
+      "label": "Invoice Type",
+      "options": "Purchase Invoice\nPurchase Order"
+    },
+    {
+      "fieldname": "entry_name",
+      "fieldtype": "Dynamic Link",
+      "in_list_view": 1,
+      "label": "Entry Name",
+      "options": "invoice_type",
+      "reqd": 1
+    },
+    {
+      "fieldname": "bank_account",
+      "fieldtype": "Link",
+      "label": "Bank Account",
+      "options": "Bank Account"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2022-11-17 12:24:55.898423",
+  "modified_by": "Administrator",
+  "module": "Vendor Payments",
+  "name": "Invoice Bank Mapping",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1,
+  "track_seen": 1,
+  "track_views": 1
+}

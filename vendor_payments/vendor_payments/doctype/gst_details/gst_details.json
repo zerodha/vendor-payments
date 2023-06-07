@@ -1,0 +1,63 @@
+{
+    "actions": [],
+    "autoname": "field:gst_slab",
+    "creation": "2022-12-22 13:10:04.395208",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "gst_slab",
+        "sgst",
+        "cgst",
+        "igst"
+    ],
+    "fields": [
+        {
+            "fieldname": "sgst",
+            "fieldtype": "Float",
+            "label": "SGST"
+        },
+        {
+            "fieldname": "cgst",
+            "fieldtype": "Float",
+            "label": "CGST"
+        },
+        {
+            "fieldname": "igst",
+            "fieldtype": "Float",
+            "label": "IGST"
+        },
+        {
+            "fieldname": "gst_slab",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "GST Slab",
+            "reqd": 1,
+            "unique": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2022-12-22 13:21:30.369630",
+    "modified_by": "Administrator",
+    "module": "Vendor Payments",
+    "name": "GST Details",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

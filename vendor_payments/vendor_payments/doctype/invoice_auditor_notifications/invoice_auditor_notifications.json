@@ -1,0 +1,58 @@
+{
+    "actions": [],
+    "autoname": "company",
+    "creation": "2023-01-12 09:15:32.066085",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "company",
+        "company_abbr",
+        "user"
+    ],
+    "fields": [
+        {
+            "fieldname": "company",
+            "fieldtype": "Link",
+            "label": "Company",
+            "options": "Company"
+        },
+        {
+            "fieldname": "user",
+            "fieldtype": "Table",
+            "label": "User",
+            "options": "Invoice Auditor Notification Detail"
+        },
+        {
+            "fetch_from": "company.abbr",
+            "fieldname": "company_abbr",
+            "fieldtype": "Data",
+            "label": "Company Abbr",
+            "read_only": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2023-01-29 17:09:21.291399",
+    "modified_by": "Administrator",
+    "module": "Vendor Payments",
+    "name": "Invoice Auditor Notifications",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

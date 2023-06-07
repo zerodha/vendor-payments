@@ -1,0 +1,128 @@
+{
+    "actions": [],
+    "creation": "2022-11-03 16:23:52.037730",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "generate_report_section",
+        "posting_date",
+        "from_date",
+        "to_date",
+        "purchase_invoice_status",
+        "generate",
+        "report_generated",
+        "generated_report",
+        "reconciliation_section",
+        "reconciliation_file",
+        "status",
+        "reconciliation_completed"
+    ],
+    "fields": [
+        {
+            "default": "Today",
+            "fieldname": "posting_date",
+            "fieldtype": "Datetime",
+            "label": "Posting date",
+            "read_only": 1
+        },
+        {
+            "fieldname": "generate_report_section",
+            "fieldtype": "Section Break",
+            "label": "Generate Report"
+        },
+        {
+            "fieldname": "from_date",
+            "fieldtype": "Date",
+            "label": "From Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "to_date",
+            "fieldtype": "Date",
+            "label": "To Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "generate",
+            "fieldtype": "Button",
+            "label": "Generate"
+        },
+        {
+            "fieldname": "reconciliation_section",
+            "fieldtype": "Section Break",
+            "label": "Reconciliation"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "hidden": 1,
+            "in_list_view": 1,
+            "label": "status",
+            "options": "\nPending\nCompleted\nReport Downloaded\nReconciliation In Progress\nReconciliation Completed",
+            "read_only": 1
+        },
+        {
+            "default": "0",
+            "fieldname": "report_generated",
+            "fieldtype": "Check",
+            "hidden": 1,
+            "label": "Report Generated",
+            "read_only": 1
+        },
+        {
+            "default": "Auditor Approved",
+            "fieldname": "purchase_invoice_status",
+            "fieldtype": "Select",
+            "label": "Purchase Invoice Status",
+            "options": "Auditor Approved",
+            "read_only": 1
+        },
+        {
+            "depends_on": "!report_generated",
+            "fieldname": "generated_report",
+            "fieldtype": "Attach",
+            "label": "Generated Report"
+        },
+        {
+            "fieldname": "reconciliation_file",
+            "fieldtype": "Attach",
+            "in_list_view": 1,
+            "label": "Reconciliation File"
+        },
+        {
+            "default": "0",
+            "fieldname": "reconciliation_completed",
+            "fieldtype": "Check",
+            "hidden": 1,
+            "label": "Reconciliation Completed",
+            "read_only": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2022-11-16 14:53:30.751878",
+    "modified_by": "Administrator",
+    "module": "Vendor Payments",
+    "name": "Purchase Invoice Report",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1,
+    "track_seen": 1,
+    "track_views": 1
+}
