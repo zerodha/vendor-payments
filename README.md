@@ -121,14 +121,19 @@ Two types of reminder emails are included as of now
 1. A reminder email is sent after two days of a purchase invoice or order entry creation. Depending on the state of the entry, emails are sent to respective persons
 2. After an entry status is updated to ‘Auditor Approved’, a reminder email is sent after two days if it is not updated to ‘Payment Done’ from the date of ‘Auditor Approved’ status.
 
+## Non Profit Organizations
 
-## Handling payments for an NGO or any organizations that doesn't have taxations
+1. For handling grant applications as a non profit organization:
 
-Sometimes there can be payments to which there is no TDS or GST, in such cases
+   please check [Non profit module](https://docs.erpnext.com/docs/v13/user/manual/en/non_profit/introduction) on erpnext 
 
-If
-1) No TDS - check `TDS Not Applicable`
-2) NO GST - Pick a 0% GST slab (Tip - create a 0% GST in GST Details doctype)
+   check installation [here](https://github.com/frappe/non_profit)
+
+2. Handling payments for an NGO or any organizations that doesn't have taxations:
+
+   Sometimes there can be payments to which there is no TDS or GST, in such cases if - 
+   1) No TDS - check `TDS Not Applicable`
+   2) NO GST - Pick a 0% GST slab (Tip - create a 0% GST in GST Details doctype)
 
 ## Known possible errors
 
