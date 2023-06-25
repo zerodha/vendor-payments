@@ -37,7 +37,7 @@ class CustomSupplier(Supplier):
             if not approver:
                 frappe.throw("Please set atleast one default approver")
 
-            frappe.share.add(
+            frappe.share.add_docshare(
                 self.doctype,
                 self.name,
                 approver,
