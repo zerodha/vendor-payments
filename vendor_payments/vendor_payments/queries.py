@@ -13,21 +13,20 @@ FETCH_BANK_ADDRESS_DETAILS = """
 """
 
 FETCH_INVOICE_DETAILS = """
-    SELECT p.name AS record_id, "N", null as 'a', ba.bank_account_no AS account_no, p.company_ AS company,
+    SELECT p.name AS record_id, "N", null as 'a', p.bank_account AS account_no, p.company_ AS company,
     p.grand_total AS amount, IF(LENGTH(s.supplier_name)>30, SUBSTRING_INDEX(s.supplier_name, ' ', 2), s.supplier_name) AS vendor_name, 
     null as 'b', null as 'c', null as 'd', null as 'e', null as 'f', null as 'g', null as 'h', null as 'i',
     CONCAT(SUBSTRING(s.supplier_name, 1, 14), DATE_FORMAT(p.creation, "%%m%%d%%s")) AS bank_narration,
     null as 'j', null as 'k', null as 'l', null as 'm', null as 'n', null as 'o', null as 'p', null as 'q',
-    DATE_FORMAT(DATE(p.modified), '%%d/%%m/%%Y') AS date, null as "r", ba.branch_code AS ifsc, ba.bank AS bank_name,
-    '' AS bank_branch, 'accountsteam@gmail.com' AS client_email,
+    DATE_FORMAT(DATE(p.modified), '%%d/%%m/%%Y') AS date, null as "r", p.ifsc AS ifsc, p.bank_name AS bank_name,
+    '' AS bank_branch, 'accountsteam@zerodha.com' AS client_email,
     ba.name AS bank_record_name
     FROM {0} p
     JOIN `tabSupplier` s
     ON s.name = p.supplier
     JOIN `tabBank Account` ba
-    ON ba.party = s.name
+    ON ba.name = p.bank_id
     WHERE DATE(p.creation) BETWEEN  %s AND %s
-    AND ba.is_default=1
     AND p.workflow_state='{1}'
 ;
 """
