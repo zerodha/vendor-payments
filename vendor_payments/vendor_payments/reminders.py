@@ -97,7 +97,7 @@ def notify(doc, method):
         # if not doc.tax_withholding_category:
         #     frappe.throw("Tax withholding category is must before sending for approval")
 
-        frappe.share.add_docshare(
+        frappe.share.add(
             doc.doctype,
             doc.name,
             doc.invoice_approver,
