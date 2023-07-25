@@ -44,11 +44,11 @@
       "reqd": 1
     },
     {
-      "default": "Auditor Approved",
+      "default": "Auditor Manager Approved",
       "fieldname": "purchase_invoice_status",
       "fieldtype": "Select",
       "label": "Purchase Invoice Status",
-      "options": "Auditor Approved",
+      "options": "Auditor Manager Approved",
       "read_only": 1
     },
     {
