@@ -41,7 +41,6 @@ class CustomSupplier(Supplier):
                 self.doctype,
                 self.name,
                 approver,
-                # submit=1,
                 flags={"ignore_share_permission": True},
             )
             recipients = [approver]

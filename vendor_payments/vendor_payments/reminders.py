@@ -101,7 +101,6 @@ def notify(doc, method):
             doc.doctype,
             doc.name,
             doc.invoice_approver,
-            submit=1,
             flags={"ignore_share_permission": True},
         )
         recipients = [doc.invoice_approver]
