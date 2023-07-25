@@ -17,6 +17,4 @@ def login_via_google(code, state):
     Step3: Give this login_via_google api endpoint address in redirect url field
     i.e redirect url will be '<base_url>/api/method/vendor_payments.api.login.login_via_google'
     """
-    login_via_oauth2(
-        "replace_this_with_name_from_ui", code, state, decoder=decoder_compat
-    )
+    login_via_oauth2("google_(boco_team)", code, state, decoder=decoder_compat)

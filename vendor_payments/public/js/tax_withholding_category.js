@@ -4,12 +4,6 @@ frappe.ui.form.on("Tax Withholding Category", {
         if (frm.is_new()) {
 
             let companies = {
-                "Zerodha Technology Pvt Ltd": "Zt",
-                "Zerodha Broking Limited": "ZBL",
-                "Zerodha": "Zer",
-                "Zerodha Capital": "ZCap",
-                "Zerodha Commodities": "ZCom",
-                "Zerodha Securities": "ZSec",
                 "Rainmatter Foundation": "RF",
             }
             let count = 0
