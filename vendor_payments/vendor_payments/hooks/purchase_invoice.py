@@ -152,7 +152,7 @@ class CustomInvoiceDeatails(PurchaseInvoice):
             return
 
         tax_withholding_details = get_party_tax_withholding_details(
-            self, self.tax_withholding_category
+            self, self.tds_category_
         )
 
         if not tax_withholding_details:
