@@ -4009,7 +4009,7 @@
             "idx": 0,
             "modified": "2023-01-02 16:46:00.227736",
             "modified_by": "admin@zerodha.com",
-            "name": "Purchase Invoice-tax_withholding_category-label",
+            "name": "Purchase Invoice-tds_category_-label",
             "owner": "admin@zerodha.com",
             "parent": null,
             "parentfield": null,
